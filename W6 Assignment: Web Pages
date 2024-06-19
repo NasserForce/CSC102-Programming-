@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>W6 Assignment: Web Pages</title>
   <style>
-    /* Set a background color for the body */
+    
     body {
       background-color: #f5f5f5;
       font-family: Arial, sans-serif;
     }
 
-    /* Style the headings */
+    
     h1, h2 {
       color: #333;
     }
 
-    /* Add some spacing and styling to the content */
+    
     main {
       max-width: 800px;
       margin: 0 auto;
