@@ -37,8 +37,10 @@
 
     <!-- Section with an image -->
     <h2>Featured Images</h2>
-    <img src="https://assets.iflscience.com/assets/articleNo/74026/aImg/75941/hawk-and-falcon-o.webp" alt="Featured Image" width="400">
-    <img src="https://www.motortrend.com/uploads/sites/5/2019/08/2020-Audi-RS-6-Avant-front-three-quarter.jpg?w=768&width=768&q=75&format=webp" alt="Featured Image" width="400">
+<div id="header">
+  <img src="https://assets.iflscience.com/assets/articleNo/74026/aImg/75941/hawk-and-falcon-o.webp" alt="Image 1" width="400">
+  <img src="https://www.motortrend.com/uploads/sites/5/2019/08/2020-Audi-RS-6-Avant-front-three-quarter.jpg?w=768&width=768&q=75&format=webp" alt="Image 2" width="400">
+</div>
     <p>These are the featured images included in my web page.</p>
 
     <!-- Section with ordered list -->
