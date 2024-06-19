@@ -36,9 +36,10 @@
     <p>This assignment focuses on creating a basic web page using HTML elements and exploring browser compatibility.</p>
 
     <!-- Section with an image -->
-    <h2>Featured Image</h2>
+    <h2>Featured Images</h2>
     <img src="https://assets.iflscience.com/assets/articleNo/74026/aImg/75941/hawk-and-falcon-o.webp" alt="Featured Image" width="400">
-    <p>This is a featured image included in the web page.</p>
+    <img src="https://www.motortrend.com/uploads/sites/5/2019/08/2020-Audi-RS-6-Avant-front-three-quarter.jpg?w=768&width=768&q=75&format=webp" alt="Featured Image" width="400">
+    <p>These are the featured images included in my web page.</p>
 
     <!-- Section with ordered list -->
     <h2>Steps to Follow</h2>
