@@ -37,7 +37,7 @@
 
     <!-- Section with an image -->
     <h2>Featured Image</h2>
-    <img src="image.jpg" alt="Featured Image" width="400">
+    <img src="https://assets.iflscience.com/assets/articleNo/74026/aImg/75941/hawk-and-falcon-o.webp" alt="Featured Image" width="400">
     <p>This is a featured image included in the web page.</p>
 
     <!-- Section with ordered list -->
