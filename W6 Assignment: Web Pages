@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>W6 Assignment: Web Pages</title>
+  <style>
+    /* Set a background color for the body */
+    body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Style the headings */
+    h1, h2 {
+      color: #333;
+    }
+
+    /* Add some spacing and styling to the content */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- Main heading -->
+    <h1>Welcome to W6 Assignment: Web Pages</h1>
+
+    <!-- Subheading -->
+    <h2>About This Assignment</h2>
+    <p>This assignment focuses on creating a basic web page using HTML elements and exploring browser compatibility.</p>
+
+    <!-- Section with an image -->
+    <h2>Featured Image</h2>
+    <img src="image.jpg" alt="Featured Image" width="400">
+    <p>This is a featured image included in the web page.</p>
+
+    <!-- Section with ordered list -->
+    <h2>Steps to Follow</h2>
+    <ol>
+      <li>Read the assignment instructions carefully.</li>
+      <li>Create an HTML document structure.</li>
+      <li>Add relevant elements and content.</li>
+      <li>Test the web page in different browsers.</li>
+      <li>Submit the assignment.</li>
+    </ol>
+
+    <!-- Section with unordered list -->
+    <h2>Browser Compatibility</h2>
+    <p>This web page should be compatible with the following browsers:</p>
+    <ul>
+      <li>Google Chrome</li>
+      <li>Mozilla Firefox</li>
+      <li>Microsoft Edge</li>
+      <li>Safari
