@@ -1,12 +1,17 @@
-Assignment: CSS Text Styling
+Page Name: index.html
 
 Description:
-This webpage displays an excerpt from the U.S. Constitution styled using CSS. The HTML and CSS files are validated using W3C validators.
+This HTML file represents the homepage of EcoSwap, a local sustainable living community platform. The page includes the following elements:
 
-HTML File: index.html
-CSS File: styles.css
+1. Header with site title and main navigation
+2. Main content area with sections for:
+   - Hero/welcome message
+   - Featured listings
+   - Latest blog posts
+   - Upcoming events
+3. Aside for community spotlight
+4. Footer with copyright information and secondary navigation
 
-Instructions:
-1. View the page using the GitHub HTML previewer: https://htmlpreview.github.io/?https://github.com/your-username/your-repo-name/index.html
-2. Validate the HTML using the W3C HTML validator: https://validator.w3.org/Links
-3. Validate the CSS using the W3C CSS validator: https://jigsaw.w3.org/css-validator/Links
+The page provides a basic structure and placeholder content for the EcoSwap website. It uses semantic HTML5 elements for improved accessibility and SEO. Basic CSS is included in the <style> tag for layout visualization.
+
+To view the page, simply open the index.html file in a web browser. No additional setup or deployment is required for this basic HTML template.
