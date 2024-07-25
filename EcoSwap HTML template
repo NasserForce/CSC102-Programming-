@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSwap - Local Sustainable Living Community</title>
+    <style>
+        /* Basic styling for layout visualization */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header, nav, main, aside, footer { padding: 20px; }
+        nav ul { list-style-type: none; padding: 0; }
+        nav ul li { display: inline; margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EcoSwap</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#swap">Swap & Share</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Welcome to EcoSwap</h2>
+            <p>Your local sustainable living community platform</p>
+        </section>
+
+        <section id="featured-listings">
+            <h2>Featured Listings</h2>
+            <!-- Placeholder for featured listings -->
+            <p>Featured eco-friendly items will be displayed here</p>
+        </section>
+
+        <section id="latest-posts">
+            <h2>Latest Blog Posts</h2>
+            <!-- Placeholder for blog posts -->
+            <p>Recent sustainable living tips and articles will appear here</p>
+        </section>
+
+        <section id="upcoming-events">
+            <h2>Upcoming Events</h2>
+            <!-- Placeholder for events -->
+            <p>Local sustainability events will be listed here</p>
+        </section>
+    </main>
+
+    <aside>
+        <h3>Community Spotlight</h3>
+        <!-- Placeholder for community highlights -->
+        <p>Highlighting active community members and their contributions</p>
+    </aside>
+
+    <footer>
+        <p>&copy; 2024 EcoSwap. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="#terms">Terms of Service</a></li>
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
