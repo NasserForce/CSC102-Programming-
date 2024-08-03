@@ -11,5 +11,6 @@ This CSS file provides styling for the EcoSwap website. It includes:
 
 The CSS uses a color scheme of green and orange, reflecting the eco-friendly nature of the website. It provides a responsive layout and ensures readability across different sections of the site.
 
+To use this CSS file I linked it to the EcoSwap HTML Template <head> section using  <link rel="stylesheet" href="styles.css">
 
 This CSS file is a starting point and can be further customized to match specific design requirements for the EcoSwap website.
