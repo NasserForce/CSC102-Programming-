@@ -1,4 +1,4 @@
-File Name: styles.css
+File Name: styles.css for EcoSwap website
 
 Description:
 This CSS file provides styling for the EcoSwap website. It includes:
