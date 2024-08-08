@@ -4,14 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoSwap - Local Sustainable Living Community</title>
-<link rel="stylesheet" href="styles.css">
-    <style>
-        /* Basic styling for layout visualization */
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header, nav, main, aside, footer { padding: 20px; }
-        nav ul { list-style-type: none; padding: 0; }
-        nav ul li { display: inline; margin-right: 10px; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
