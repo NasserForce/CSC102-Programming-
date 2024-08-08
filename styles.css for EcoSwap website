@@ -16,40 +16,37 @@ body {
 header {
     background: #4CAF50;
     color: white;
-    padding-top: 30px;
+    padding: 20px;
     min-height: 70px;
     border-bottom: #e8491d 3px solid;
-}
-
-header a {
-    color: #ffffff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-}
-
-header ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-header li {
-    display: inline;
-    padding: 0 20px 0 20px;
-}
-
-header #branding {
-    float: left;
-}
-
-header #branding h1 {
-    margin: 0;
 }
 
 header nav {
     float: right;
     margin-top: 10px;
+}
+
+header nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    padding: 0 20px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+header nav ul li a:hover {
+    background: #e8491d;
+    border-radius: 5px;
 }
 
 main {
