@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoSwap - Local Sustainable Living Community</title>
     <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="EcoSwap is a local sustainable living community platform for exchanging eco-friendly products and services.">
+    <meta name="keywords" content="sustainable, eco-friendly, community, swap, share">
+    <meta name="author" content="Your Name">
 </head>
 <body>
     <header>
@@ -16,38 +19,54 @@
                 <li><a href="#swap">Swap & Share</a></li>
                 <li><a href="#community">Community</a></li>
                 <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="hero">
+            <img src="EcoSwap logo.jpg" alt="Eco-friendly community">
             <h2>Welcome to EcoSwap</h2>
             <p>Your local sustainable living community platform</p>
         </section>
 
         <section id="featured-listings">
             <h2>Featured Listings</h2>
-            <!-- Placeholder for featured listings -->
-            <p>Featured eco-friendly items will be displayed here</p>
+<div class="image-container">
+            <img src="ecobench.jpg" alt="eco-friendly bench">
+ <img src="ecotable.jpg" alt="eco-friendly table">
+</div>
         </section>
 
         <section id="latest-posts">
             <h2>Latest Blog Posts</h2>
-            <!-- Placeholder for blog posts -->
-            <p>Recent sustainable living tips and articles will appear here</p>
+            <img src="ecoswapblog.jpg" alt="EcoSwap blog">
         </section>
 
         <section id="upcoming-events">
             <h2>Upcoming Events</h2>
-            <!-- Placeholder for events -->
-            <p>Local sustainability events will be listed here</p>
+            <img src="ecoevent.jpg" alt="EcoSwap event">
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email us at <a href="mailto:contact@ecoswap.com">contact@ecoswap.com</a></p>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message"></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
         </section>
     </main>
 
     <aside>
         <h3>Community Spotlight</h3>
-        <!-- Placeholder for community highlights -->
+<img src="ecocommunity.jpg" alt="community spotlight">
         <p>Highlighting active community members and their contributions</p>
     </aside>
 
