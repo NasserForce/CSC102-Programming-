@@ -1,30 +1,22 @@
-// Function to play the Craps game
 function playCraps() {
-    // Generate two random numbers between 1 and 6
     let die1 = Math.floor(Math.random() * 6) + 1;
     let die2 = Math.floor(Math.random() * 6) + 1;
-
-    // Calculate the sum of the dice
     let sum = die1 + die2;
 
-    // Display the dice values
     document.getElementById('diceValues').innerHTML = `Dice: ${die1}, ${die2}`;
-
-    // Display the sum
     document.getElementById('diceSum').innerHTML = `Sum: ${sum}`;
 
-    // Determine the game result based on the rules
     let result;
     if (sum === 7 || sum === 11) {
         result = "CRAPS - you lose!";
-    } else if (die1 === die2 && die1 % 2 === 0) {
+    } else if (die1 === die2 && die1 % 2 !== 0) { // Logic error: checking for odd doubles instead of even
         result = "You won!";
     } else {
         result = "You pushed";
     }
 
-    // Display the game result
     document.getElementById('gameResult').innerHTML = result;
+    console.log(`Dice: ${die1}, ${die2}, Result: ${result}`); // Added for debugging
 }
 
 // Function to handle betting
