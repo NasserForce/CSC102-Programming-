@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Manipulation and Validation</title>
+    <style>
+        /* Add your creative styling here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 100%;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+        #secretMessage {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e6ffe6;
+            border: 1px solid #4CAF50;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="userForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required>
+        
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required>
+        
+        <label for="zipCode">Zip Code:</label>
+        <input type="text" id="zipCode" required>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="errorMessages"></div>
+    <div id="secretMessage"></div>
+
+    <script>
+        document.getElementById('userForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent form from submitting
+
+    // Get input values
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const zipCode = document.getElementById('zipCode').value.trim();
+
+    // Combine first and last name
+    const fullName = firstName + ' ' + lastName;
+
+    // Reset error messages
+    document.getElementById('errorMessages').innerHTML = '';
+
+    // Validate full name length
+    if (fullName.length > 20) {
+        showError('Full name must not exceed 20 characters.');
+        return;
+    }
+
+    // Validate zip code
+    if (!/^\d{5}$/.test(zipCode)) {
+        showError('Zip code must be exactly 5 digits.');
+        return;
+    }
+
+    // If all validations pass, show secret message
+    showSecretMessage(fullName);
+});
+
+function showError(message) {
+    const errorDiv = document.getElementById('errorMessages');
+    errorDiv.innerHTML = `<p class="error">${message}</p>`;
+}
+
+function showSecretMessage(name) {
+    const secretDiv = document.getElementById('secretMessage');
+    secretDiv.style.display = 'block';
+    secretDiv.innerHTML = `<h2>Welcome, ${name}!</h2>
+                           <p>Here's your secret message: "You've unlocked the hidden treasure!"</p>`;
+}
+    </script>
+</body>
+</html>
