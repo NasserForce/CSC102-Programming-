@@ -7,6 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fun Meme Page</title>
     <link rel="stylesheet" href="main.css">
+    <style>
+        /* Additional styles for buttons and image */
+        #memeImage {
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            transition: all 0.5s ease;
+        }
+        .button-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,9 +40,16 @@
         <a href="./boards.html">Boards</a><br>
     </nav>
 
-    <p>
+    <!-- Container for Start and Stop buttons -->
+    <div class="button-container">
+        <button id="startButton" onclick="startMoving()">Start</button>
+        <button id="stopButton" onclick="stopMoving()" disabled>Stop</button>
+    </div>
+
+    <!-- Container for the meme image -->
+    <div>
         <img id="memeImage" src="funnymeme.jpg" alt="Funny meme">
-    </p>
+    </div>
 
     <footer>
         Nasser.A<br>
@@ -31,5 +59,44 @@
         <!-- this is just some additional information I added -->
         <p>Check out our <a href="https://www.uat.edu/">official website</a> for more information!</p>
     </footer>
+
+    <script>
+        // Get references to the meme image and buttons
+        const memeImage = document.getElementById('memeImage');
+        const startButton = document.getElementById('startButton');
+        const stopButton = document.getElementById('stopButton');
+
+        let animationId; // Variable to store the animation frame ID
+
+        // Function to move the meme image
+        function moveMeme() {
+            // Generate random positions within the viewport
+            const maxX = window.innerWidth - memeImage.width;
+            const maxY = window.innerHeight - memeImage.height;
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+
+            // Set the new position
+            memeImage.style.left = randomX + 'px';
+            memeImage.style.top = randomY + 'px';
+
+            // Continue the animation
+            animationId = requestAnimationFrame(moveMeme);
+        }
+
+        // Function to start moving the meme
+        function startMoving() {
+            startButton.disabled = true;
+            stopButton.disabled = false;
+            moveMeme();
+        }
+
+        // Function to stop moving the meme
+        function stopMoving() {
+            startButton.disabled = false;
+            stopButton.disabled = true;
+            cancelAnimationFrame(animationId);
+        }
+    </script>
 </body>
 </html>
