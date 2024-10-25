@@ -10,9 +10,8 @@
     <style>
         /* Additional styles for buttons and image */
         #memeImage {
-            position: relative;
+            position: absolute;
             display: block;
-            margin: 0 auto;
             max-width: 100%;
             height: auto;
             transition: all 0.5s ease;
@@ -60,43 +59,7 @@
         <p>Check out our <a href="https://www.uat.edu/">official website</a> for more information!</p>
     </footer>
 
-    <script>
-        // Get references to the meme image and buttons
-        const memeImage = document.getElementById('memeImage');
-        const startButton = document.getElementById('startButton');
-        const stopButton = document.getElementById('stopButton');
-
-        let animationId; // Variable to store the animation frame ID
-
-        // Function to move the meme image
-        function moveMeme() {
-            // Generate random positions within the viewport
-            const maxX = window.innerWidth - memeImage.width;
-            const maxY = window.innerHeight - memeImage.height;
-            const randomX = Math.floor(Math.random() * maxX);
-            const randomY = Math.floor(Math.random() * maxY);
-
-            // Set the new position
-            memeImage.style.left = randomX + 'px';
-            memeImage.style.top = randomY + 'px';
-
-            // Continue the animation
-            animationId = requestAnimationFrame(moveMeme);
-        }
-
-        // Function to start moving the meme
-        function startMoving() {
-            startButton.disabled = true;
-            stopButton.disabled = false;
-            moveMeme();
-        }
-
-        // Function to stop moving the meme
-        function stopMoving() {
-            startButton.disabled = false;
-            stopButton.disabled = true;
-            cancelAnimationFrame(animationId);
-        }
-    </script>
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
