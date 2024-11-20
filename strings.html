@@ -30,6 +30,7 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            margin-right: 5px;
         }
         .error {
             color: red;
@@ -56,53 +57,79 @@
         <input type="text" id="zipCode" required>
         
         <button type="submit">Submit</button>
+        <button type="button" id="playButton">Play Audio</button>
+        <button type="button" id="muteButton">Mute Audio</button>
     </form>
 
     <div id="errorMessages"></div>
     <div id="secretMessage"></div>
 
+    <!-- Audio element for background sound -->
+    <audio id="backgroundAudio" loop>
+        <source src="us-lab-background.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <script>
+        const backgroundAudio = document.getElementById('backgroundAudio');
+        const playButton = document.getElementById('playButton');
+        const muteButton = document.getElementById('muteButton');
+
+        playButton.addEventListener('click', function() {
+            backgroundAudio.play();
+        });
+
+        muteButton.addEventListener('click', function() {
+            if (backgroundAudio.muted) {
+                backgroundAudio.muted = false;
+                muteButton.textContent = 'Mute Audio';
+            } else {
+                backgroundAudio.muted = true;
+                muteButton.textContent = 'Unmute Audio';
+            }
+        });
+
         document.getElementById('userForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevent form from submitting
+            e.preventDefault(); // Prevent form from submitting
 
-    // Get input values
-    const firstName = document.getElementById('firstName').value.trim();
-    const lastName = document.getElementById('lastName').value.trim();
-    const zipCode = document.getElementById('zipCode').value.trim();
+            // Get input values
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const zipCode = document.getElementById('zipCode').value.trim();
 
-    // Combine first and last name
-    const fullName = firstName + ' ' + lastName;
+            // Combine first and last name
+            const fullName = firstName + ' ' + lastName;
 
-    // Reset error messages
-    document.getElementById('errorMessages').innerHTML = '';
+            // Reset error messages
+            document.getElementById('errorMessages').innerHTML = '';
 
-    // Validate full name length
-    if (fullName.length > 20) {
-        showError('Full name must not exceed 20 characters.');
-        return;
-    }
+            // Validate full name length
+            if (fullName.length > 20) {
+                showError('Full name must not exceed 20 characters.');
+                return;
+            }
 
-    // Validate zip code
-    if (!/^\d{5}$/.test(zipCode)) {
-        showError('Zip code must be exactly 5 digits.');
-        return;
-    }
+            // Validate zip code
+            if (!/^\d{5}$/.test(zipCode)) {
+                showError('Zip code must be exactly 5 digits.');
+                return;
+            }
 
-    // If all validations pass, show secret message
-    showSecretMessage(fullName);
-});
+            // If all validations pass, show secret message
+            showSecretMessage(fullName);
+        });
 
-function showError(message) {
-    const errorDiv = document.getElementById('errorMessages');
-    errorDiv.innerHTML = `<p class="error">${message}</p>`;
-}
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessages');
+            errorDiv.innerHTML = `<p class="error">${message}</p>`;
+        }
 
-function showSecretMessage(name) {
-    const secretDiv = document.getElementById('secretMessage');
-    secretDiv.style.display = 'block';
-    secretDiv.innerHTML = `<h2>Welcome, ${name}!</h2>
-                           <p>Here's your secret message: "You've unlocked the hidden treasure!"</p>`;
-}
+        function showSecretMessage(name) {
+            const secretDiv = document.getElementById('secretMessage');
+            secretDiv.style.display = 'block';
+            secretDiv.innerHTML = `<h2>Welcome, ${name}!</h2>
+                                   <p>Here's your secret message: "You've unlocked the hidden treasure!"</p>`;
+        }
     </script>
 </body>
 </html>
