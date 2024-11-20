@@ -3,10 +3,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Set character encoding and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Set page title -->
     <title>Fun Meme Page</title>
+    
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="main.css">
+    
     <style>
         /* Additional styles for buttons and image */
         #memeImage {
@@ -29,20 +35,29 @@
     </style>
 </head>
 <body>
+    <!-- Header section -->
     <header>
         <h1>Welcome to My Fun Meme Page!</h1>
     </header>
     
+    <!-- Navigation section -->
     <nav>
         <h2>Navigation</h2>
         <a href="./index2.1.html">Home</a><br>
         <a href="./boards.html">Boards</a><br>
     </nav>
 
-    <!-- Container for Start and Stop buttons -->
+    <!-- Audio element for background sound -->
+    <audio id="backgroundAudio" loop>
+        <source src="us-lab-background.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Container for Start, Stop, and Mute buttons -->
     <div class="button-container">
         <button id="startButton" onclick="startMoving()">Start</button>
         <button id="stopButton" onclick="stopMoving()" disabled>Stop</button>
+        <button id="muteButton" onclick="toggleMute()">Mute</button>
     </div>
 
     <!-- Container for the meme image -->
@@ -50,12 +65,13 @@
         <img id="memeImage" src="funnymeme.jpg" alt="Funny meme">
     </div>
 
+    <!-- Footer section -->
     <footer>
         Nasser.A<br>
         University of Advancing Technology<br>
         2625 W Baseline Rd, Tempe, AZ 85283<br>
         Tempe, AZ 85283<br>
-        <!-- this is just some additional information I added -->
+        <!-- Additional information -->
         <p>Check out our <a href="https://www.uat.edu/">official website</a> for more information!</p>
     </footer>
 
