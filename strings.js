@@ -1,21 +1,29 @@
-  const backgroundAudio = document.getElementById('backgroundAudio');
-        const playButton = document.getElementById('playButton');
-        const muteButton = document.getElementById('muteButton');
+ // Get references to the audio element and control buttons
+const backgroundAudio = document.getElementById('backgroundAudio');
+const playButton = document.getElementById('playButton');
+const muteButton = document.getElementById('muteButton');
 
-        playButton.addEventListener('click', function() {
-            backgroundAudio.play();
-        });
+// Add click event listener to the play button
+playButton.addEventListener('click', function() {
+    // Start playing the background audio when the play button is clicked
+    backgroundAudio.play();
+});
 
-        muteButton.addEventListener('click', function() {
-            if (backgroundAudio.muted) {
-                backgroundAudio.muted = false;
-                muteButton.textContent = 'Mute Audio';
-            } else {
-                backgroundAudio.muted = true;
-                muteButton.textContent = 'Unmute Audio';
-            }
-        });
-
+// Add click event listener to the mute button
+muteButton.addEventListener('click', function() {
+    // Check if the audio is currently muted
+    if (backgroundAudio.muted) {
+        // If muted, unmute the audio
+        backgroundAudio.muted = false;
+        // Update button text to reflect the current state
+        muteButton.textContent = 'Mute Audio';
+    } else {
+        // If not muted, mute the audio
+        backgroundAudio.muted = true;
+        // Update button text to reflect the current state
+        muteButton.textContent = 'Unmute Audio';
+    }
+});
         document.getElementById('userForm').addEventListener('submit', function(e) {
             e.preventDefault(); // Prevent form from submitting
 
