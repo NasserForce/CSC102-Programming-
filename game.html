@@ -1,3 +1,7 @@
+<!-- Name: [Your Name Here] -->
+<!-- Date: November 28, 2024 -->
+<!-- This is the main HTML file for the Quarks Casino Craps game -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +17,16 @@
         <h1>Welcome to Quarks Casino</h1>
         <h2>Let's Play Craps!</h2>
 
+        <!-- Input field for player name -->
+        <input type="text" id="playerName" placeholder="Enter your name">
+        <button id="setNameButton">Set Name</button>
+
+        <!-- Display area for welcome message -->
+        <div id="welcomeMessage"></div>
+
+        <!-- Display area for player balance -->
+        <div id="playerBalance"></div>
+
         <!-- Button to start the game -->
         <button id="playButton">Roll the Dice</button>
 
@@ -24,6 +38,9 @@
 
         <!-- Container for sum of dice -->
         <div id="diceSum"></div>
+
+        <!-- Container for last 5 rolls -->
+        <div id="lastRolls"></div>
 
         <!-- Input field for bet amount -->
         <input type="number" id="betAmount" placeholder="Enter your bet">
